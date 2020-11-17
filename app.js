@@ -13,7 +13,7 @@ const authRoute = require("./routes/auth");
 const ErrorController = require("./controllers/error");
 
 const MongoDBStore = require("connect-mongodb-session")(session);
-
+//  "homepage": "https://Eyalilan.github.io/Shoplist",
 const csrf = require('csurf')
 const flash = require('connect-flash')
 
@@ -112,10 +112,12 @@ app.use((error,req,res,next)=>{
   })
 })
 
+const port = process.env.port || 3000
+
 mongoose
   .connect(MONGODB_URI)
   .then(result => {
-    app.listen(3000, (req, res) => {
+    app.listen(port, (req, res) => {
       console.log("Server Connected");
     });
   })

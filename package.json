@@ -28,9 +28,9 @@
     "stripe": "^8.121.0"
   },
   "devDependencies": {},
-  "homepage": "https://Eyalilan.github.io/shoplist",
+ 
+  
   "scripts": {
-    "deploy": "gh-pages -d dist",
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
